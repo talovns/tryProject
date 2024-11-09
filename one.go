@@ -19,5 +19,4 @@ var a int
 func main() {
 	fmt.Scan(&a)
 	fmt.Print(Visokosnygod(a))
-	fmt.Print(1)
 }
