@@ -1,22 +1,23 @@
-// package main
+package main
 
-// import (
-// 	"fmt"
-// )
+import (
+	"fmt"
+)
 
-// func Visokosnygod(x int) string {
-// 	if (x%400 == 0) && (x%100 == 0) {
-// 		return "true"
-// 	} else if (x%4 == 0) && (x%100 != 0) {
-// 		return "true"
-// 	} else {
-// 		return "false"
-// 	}
-// }
+func Visokosnygod(x int) string {
+	if (x%400 == 0) && (x%100 == 0) {
+		return "true"
+	} else if (x%4 == 0) && (x%100 != 0) {
+		return "true"
+	} else {
+		return "false"
+	}
+}
 
-// var a int
+var a int
 
-// func main() {
-// 	fmt.Scan(&a)
-// 	fmt.Print(Visokosnygod(a))
-// }
+func main() {
+	fmt.Scan(&a)
+	fmt.Print(Visokosnygod(a))
+	fmt.Print(1)
+}
