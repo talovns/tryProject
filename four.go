@@ -6,8 +6,10 @@ func OBShPrEF(lst []string) {
 	var pr = []string{}
 	var rez = []string{}
 	for _, value := range lst {
-		for i := 1; i < len(value); i++ {
-			pr = append(pr, value[:i])
+		for i := 0; i < len(value); i++ {
+			for j := i; j < len(value); j++ {
+				pr = append(pr, value[i:j])
+			}
 		}
 	}
 	for r := 0; r < len(pr); r++ {
@@ -22,12 +24,20 @@ func OBShPrEF(lst []string) {
 			rez = append(rez, zn)
 		}
 	}
-	fmt.Print(rez[len(rez)-1])
+	var mx string
+	for k := 1; k < len(rez); k++ {
+		if len(rez[k-1]) >= len(rez[k]) {
+			mx = rez[k-1]
+		} else {
+			mx = rez[k]
+		}
+	}
+	fmt.Print(mx)
 
 }
 
 func main() {
-	var lst = []string{"flow", "flower", "flight"}
+	var lst = []string{"aflow", "bflower", "cflight"}
 	OBShPrEF(lst)
 
 }
